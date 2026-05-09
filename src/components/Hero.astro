@@ -1,0 +1,92 @@
+---
+---
+
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content fade-in">
+      <h1>เชี่ยวชาญด้านงานฉีดพลาสติกและออกแบบแม่พิมพ์ครบวงจร</h1>
+      <p>คุณภาพระดับมาตรฐาน โดย เอเชียควอลิตี้พลาสติก</p>
+      <div class="hero-actions">
+        <a href="#services" class="btn btn-accent">บริการของเรา</a>
+        <a href="#contact" class="btn btn-primary outline-btn">ติดต่อเรา</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+    color: #fff;
+    overflow: hidden;
+  }
+
+  /* Optional abstract industrial pattern overlay */
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(var(--color-accent-dark) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.1;
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-content {
+    max-width: 800px;
+  }
+
+  .hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+
+  .hero-content p {
+    font-size: 1.5rem;
+    color: var(--color-accent-light);
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .outline-btn {
+    background: transparent;
+    border: 2px solid #fff;
+  }
+
+  .outline-btn:hover {
+    background: #fff;
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+    }
+    .hero-actions {
+      flex-direction: column;
+    }
+  }
+</style>

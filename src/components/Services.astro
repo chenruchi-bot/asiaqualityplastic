@@ -1,0 +1,100 @@
+---
+const services = [
+  {
+    title: 'บริการอัดฉีดพลาสติก',
+    subtitle: '(Injection)',
+    description: 'รับฉีดพลาสติกทุกชนิดด้วยเครื่องจักรที่ทันสมัยและได้มาตรฐาน ควบคุมคุณภาพทุกขั้นตอนการผลิต',
+    icon: `<svg xmlns="http://www.w0.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" /></svg>`
+  },
+  {
+    title: 'ออกแบบและผลิตแม่พิมพ์',
+    subtitle: '(Mold Design)',
+    description: 'ออกแบบและสร้างแม่พิมพ์ด้วยโปรแกรม 3D และเครื่อง CNC ความแม่นยำสูง',
+    icon: `<svg xmlns="http://www.w0.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" /></svg>`
+  },
+  {
+    title: 'ปั้มขึ้นรูปพลาสติก',
+    subtitle: '(Forming / Stamping)',
+    description: 'งานปั้มขึ้นรูปพลาสติกตามแบบที่ลูกค้าต้องการ รองรับการผลิตจำนวนมาก',
+    icon: `<svg xmlns="http://www.w0.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" /></svg>` // Use a fitting icon, maybe a square or layer
+  },
+  {
+    title: 'ซ่อมแซมผลิตภัณฑ์พลาสติก',
+    subtitle: '(Repair)',
+    description: 'บริการรับซ่อมแซมและปรับปรุงชิ้นงานพลาสติกทุกประเภทให้กลับมาใช้งานได้ดีดังเดิม',
+    icon: `<svg xmlns="http://www.w0.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" /></svg>`
+  }
+];
+---
+
+<section id="services" class="section section-bg-alt">
+  <div class="container">
+    <h2 class="section-title">บริการของเรา</h2>
+    <div class="services-grid">
+      {services.map(service => (
+        <div class="service-card">
+          <div class="icon-wrapper" set:html={service.icon}></div>
+          <h3>{service.title}</h3>
+          <span class="subtitle">{service.subtitle}</span>
+          <p>{service.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .service-card {
+    background: #fff;
+    padding: 2.5rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    border-bottom: 4px solid transparent;
+  }
+
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-bottom-color: var(--color-primary);
+  }
+
+  .icon-wrapper {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1.5rem;
+    color: var(--color-primary);
+    background: var(--color-bg-alt);
+    border-radius: 50%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .service-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  .subtitle {
+    display: block;
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-card p {
+    color: var(--color-text);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+</style>

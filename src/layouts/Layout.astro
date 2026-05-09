@@ -1,0 +1,48 @@
+---
+import '../styles/global.css';
+
+const siteTitle = "บริษัท เอเชียควอลิตี้พลาสติก จำกัด | Asia Quality Plastic Co., Ltd.";
+const siteDescription = "เชี่ยวชาญด้านงานฉีดพลาสติกและออกแบบแม่พิมพ์ครบวงจร คุณภาพระดับมาตรฐาน โดย เอเชียควอลิตี้พลาสติก";
+
+// LocalBusiness Schema
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Asia Quality Plastic Co., Ltd.",
+  "alternateName": "บริษัท เอเชียควอลิตี้พลาสติก จำกัด",
+  "image": "", 
+  "@id": "",
+  "url": "",
+  "telephone": ["024271295", "0618585596"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "222, 224 ซอยพระรามที่ 2 ซอย 3 ถนนพระราม 2",
+    "addressLocality": "แขวงบางมด เขตจอมทอง",
+    "addressRegion": "กรุงเทพมหานคร",
+    "postalCode": "10150",
+    "addressCountry": "TH"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 13.682, // Approximate for Rama 2, update as needed
+    "longitude": 100.469
+  },
+  "priceRange": "$$"
+};
+---
+
+<!doctype html>
+<html lang="th">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{siteTitle}</title>
+		<meta name="description" content={siteDescription} />
+		<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>

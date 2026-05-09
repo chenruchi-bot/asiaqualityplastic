@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import About from '../components/About.astro';
+import Contact from '../components/Contact.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+  <main>
+    <Hero />
+    <Services />
+    <About />
+    <Contact />
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; {new Date().getFullYear()} บริษัท เอเชียควอลิตี้พลาสติก จำกัด (Asia Quality Plastic Co., Ltd.). All rights reserved.</p>
+    </div>
+  </footer>
+</Layout>
+
+<style>
+  main {
+    width: 100%;
+  }
+
+  .footer {
+    background-color: var(--color-primary-dark);
+    color: var(--color-accent-light);
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+</style>

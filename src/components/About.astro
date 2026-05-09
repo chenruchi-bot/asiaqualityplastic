@@ -1,0 +1,101 @@
+---
+---
+
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-content">
+        <h2 class="section-title" style="text-align: left;">เกี่ยวกับเรา</h2>
+        <h3>ผู้เชี่ยวชาญด้านงานพลาสติกทุกประเภท</h3>
+        <p>
+          บริษัท เอเชียควอลิตี้พลาสติก จำกัด มีความมุ่งมั่นในการให้บริการด้าน <strong>ทุกประเภทผลิตภัณฑ์พลาสติก</strong> 
+          ตั้งแต่การออกแบบและผลิตแม่พิมพ์ที่มีความแม่นยำสูง ไปจนถึงกระบวนการฉีดพลาสติกและปั้มขึ้นรูป 
+          เราให้ความสำคัญกับความละเอียด (Precision) และคุณภาพ (Quality) ในทุกชิ้นงาน
+        </p>
+        <p>
+          ด้วยประสบการณ์และเครื่องจักรที่ทันสมัย เราสามารถตอบสนองความต้องการของลูกค้าในอุตสาหกรรมต่างๆ 
+          ได้อย่างครบวงจร มั่นใจได้ในมาตรฐานระดับสากลและความตรงต่อเวลา
+        </p>
+        <ul class="features-list">
+          <li>✓ ประสบการณ์ยาวนานในอุตสาหกรรมพลาสติก</li>
+          <li>✓ ควบคุมคุณภาพอย่างเข้มงวดทุกขั้นตอน</li>
+          <li>✓ เครื่องจักรทันสมัย รองรับการผลิตจำนวนมาก</li>
+          <li>✓ บริการครบวงจรตั้งแต่ต้นจนจบ</li>
+        </ul>
+      </div>
+      <div class="about-image">
+        <!-- Placeholder for industrial image -->
+        <div class="image-placeholder">
+          <div class="placeholder-text">ภาพโรงงาน / เครื่องจักร</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .about-content .section-title::after {
+    left: 0;
+    transform: none;
+  }
+
+  .about-content h3 {
+    font-size: 1.8rem;
+    color: var(--color-primary-dark);
+    margin-bottom: 1.5rem;
+  }
+
+  .about-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-light);
+  }
+
+  .features-list {
+    margin-top: 2rem;
+  }
+
+  .features-list li {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-primary);
+    font-weight: 500;
+  }
+
+  .about-image {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+  }
+
+  .image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--color-accent-light), var(--color-accent));
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .placeholder-text {
+    color: var(--color-primary-dark);
+    font-weight: 600;
+    font-size: 1.2rem;
+    opacity: 0.6;
+  }
+
+  @media (max-width: 992px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
